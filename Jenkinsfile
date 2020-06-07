@@ -13,6 +13,12 @@ pipeline {
              sh 'npm install'
          }
        }
+	    
+	     stage('Adding Android Platform') {
+          steps {
+             sh 'ionic cordova platform add android'
+         }
+       }
 
        stage('Android Build') {
           steps {
